@@ -1,11 +1,10 @@
 import React from 'react';
-import Loader from "react-js-loader";
+import { BallTriangle } from "react-loader-spinner";
 
 const Spinner = ({message}) => {
   return (
     <div className='flex flex-col justify-center items-center w-full h-full'>
-        <Loader 
-            type='Circles'
+        <BallTriangle 
             color="#00BFFF"
             height={50}
             width={200}
