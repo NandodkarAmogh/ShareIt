@@ -24,23 +24,23 @@ With all advanced social media features, such as Google Authentication, create, 
 ### Screenshots
 
 #### Desktop
-![](shareit_frontend\src\assets\desktop1.png
-)
-![](./src/assets/desktop2.png)
-![](./src/assets/desktop3.png)
-![](./src/assets/desktop4.png)
-![](./src/assets/desktop5.png)
-![](./src/assets/desktop6.png)
+![](./images/desktop1.png)
+![](./images/desktop2.png)
+![](./images/desktop3.png)
+![](./images/desktop4.png)
+![](./images/desktop5.png)
+![](./images/desktop6.png)
+
 
 
 #### Mobile
-![](./src/assets/mobile1.png)
-![](./src/assets/mobile2.png)
-![](./src/assets/mobile3.png)
-![](./src/assets/mobile4.png)
-![](./src/assets/mobile5.png)
-![](./src/assets/mobile6.png)
-![](./src/assets/mobile7.png)
+![](./images/mobile1.png)
+![](./images/mobile2.png)
+![](./images/mobile3.png)
+![](./images/mobile4.png)
+![](./images/mobile5.png)
+![](./images/mobile6.png)
+![](./images/mobile7.png)
 
 ### Links
 
