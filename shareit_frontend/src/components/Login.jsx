@@ -44,11 +44,11 @@ const Login = () => {
         />
         <div className='absolute flex flex-col justify-center items-center top-0 right-0 left-0 bottom-0 bg-blackOverlay'>
           <div className='p-5'>
-            <img src={ShareItWhite} width='130px' />
+            <img src={ShareItWhite} width='130px' alt='logo-white' />
           </div> 
           <div className='shadow-2xl'>
             <GoogleLogin
-              clientId={process.env.REACT_APP_GOOGLE_API_TOKEN}
+              clientId={`${process.env.REACT_APP_GOOGLE_API_TOKEN}`}
               render={(renderProps) => (
                 <button 
                   type='button'

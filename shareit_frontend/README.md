@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# ShareIt
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of contents
 
-## Available Scripts
+- [Overview](#overview)
+  - [Demo](#demo)
+  - [Screenshot](#screenshot)
+    - [Desktop](#desktop)
+    - [Mobile](#mobile)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Author](#author)
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Overview
+With all advanced social media features, such as Google Authentication, create, edit, delete and save posts, like and comment on other people's posts, search and filter images and much more, ShareIt is an Image Sharing Social Media App .Sanity.io manages text, images, and all other data using APIs.
+### Demo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Screenshots
 
-### `npm run build`
+#### Desktop
+![](./src/assets/desktop1.png)
+![](./src/assets/desktop2.png)
+![](./src/assets/desktop3.png)
+![](./src/assets/desktop4.png)
+![](./src/assets/desktop5.png)
+![](./src/assets/desktop6.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Mobile
+![](./src/assets/mobile1.png)
+![](./src/assets/mobile2.png)
+![](./src/assets/mobile3.png)
+![](./src/assets/mobile4.png)
+![](./src/assets/mobile5.png)
+![](./src/assets/mobile6.png)
+![](./src/assets/mobile7.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Links
 
-### `npm run eject`
+- Solution URL: []()
+- Live Site URL: [https://shareitsocial.netlify.app/](https://shareitsocial.netlify.app/)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## My process
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Built with
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [React Router](https://reactrouter.com/) 
+- [Sanity.io](https://www.sanity.io/)
+- [Tailwind CSS](https://tailwindcss.com/) - For styles
+### What I learned
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This is my first project in which I worked with Sanity. This project helped me in revising some of the core react concepts like react router and hooks like useState and useEffect. Through this project I also learned to write sanity queries 
 
-## Learn More
+```react
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    export const userQuery = (userId) => {
+    const query = `*[_type == "user" && _id == '${userId}']`;
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    return query
+    };
 
-### Code Splitting
+    export const userCreatedPinsQuery = (userId) => {
+    const query = `*[ _type == 'pin' && userId == '${userId}'] | order(_createdAt desc){
+        image{
+        asset->{
+            url
+        }
+        },
+        _id,
+        destination,
+        postedBy->{
+        _id,
+        userName,
+        image
+        },
+        save[]{
+        postedBy->{
+            _id,
+            userName,
+            image
+        },
+        },
+    }`;
+    return query;
+    };
+```
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Github - [@NandodkarAmogh](https://github.com/NandodkarAmogh)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
