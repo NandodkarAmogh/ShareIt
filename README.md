@@ -11,7 +11,7 @@
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-- [Author](#author)
+- [Author](#author) 
 
 
 
@@ -24,7 +24,8 @@ With all advanced social media features, such as Google Authentication, create, 
 ### Screenshots
 
 #### Desktop
-![](./src/assets/desktop1.png)
+![](shareit_frontend\src\assets\desktop1.png
+)
 ![](./src/assets/desktop2.png)
 ![](./src/assets/desktop3.png)
 ![](./src/assets/desktop4.png)
